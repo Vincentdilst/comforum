@@ -2,10 +2,10 @@
 // connect.php
 include 'config.php';
 // kan vervangen worder door.
-$server = 'localhost';
-$username   = 'usernamehere';
-$password   = 'passwordhere';
-$database   = 'databasenamehere';
+//$server = 'localhost';
+//$username   = 'usernamehere';
+//$password   = 'passwordhere';
+//$database   = 'databasenamehere';
 
 if (!mysql_connect($db_hostname, $db_username, $db_password))
 {

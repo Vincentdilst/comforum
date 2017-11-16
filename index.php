@@ -3,12 +3,8 @@
 include 'connect.php';
 include 'header.php';
  
-$sql = "SELECT
-            cat_id,
-            cat_name,
-            cat_description,
-        FROM
-            categories";
+$sql = "SELECT * FROM
+            forum_categories";
  
 $result = mysql_query($sql);
  
@@ -35,10 +31,10 @@ else
         {               
             echo '<tr>';
                 echo '<td class="leftpart">';
-                    echo '<h3><a href="category.php?id">' . $row['cat_name'] . '</a></h3>' . $row['cat_description'];
+                    echo "<h3><a href=category.php?id=" . $row['cat_id'] . ">" . $row['cat_name'] ." </a></h3>";
                 echo '</td>';
                 echo '<td class="rightpart">';
-                            echo '<a href="topic.php?id=">Topic subject</a> at 10-10';
+                            echo '<a href="topic.php?id=" ."Topic subject</a>';
                 echo '</td>';
             echo '</tr>';
         }

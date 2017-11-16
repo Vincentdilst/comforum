@@ -17,9 +17,8 @@ else
     $cname = $_POST['cat_name'];
     $cdes = $_POST['cat_description'];
     //the form has been posted, so save it
-    $sql = "INSERT INTO categories(cat_name, cat_description)
-       VALUES ' . $cname . ', '. $cdes .'
-             ";
+    $sql = "INSERT INTO forum_categories (cat_name, cat_description)
+       VALUES ('$cname', '$cdes')";
     $result = mysql_query($sql);
     if(!$result)
     {
